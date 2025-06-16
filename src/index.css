@@ -1,1 +1,29 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #101828;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
