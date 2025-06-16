@@ -1,4 +1,6 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const projects = [
   {
@@ -77,12 +79,27 @@ const projects = [
 ];
 
 const Projects = () => {
+  const constraintsRef = useRef(null);
+
   return (
-    <section id="projects" className="p-8 max-w-6xl mx-auto">
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      id="projects"
+      className="p-8 max-w-6xl mx-auto"
+    >
       <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div ref={constraintsRef} className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <div
+          <motion.div
+            drag
+            dragConstraints={constraintsRef}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
             key={index}
             className="bg-white dark:bg-black/50 rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300 flex flex-col"
           >
@@ -91,7 +108,7 @@ const Projects = () => {
               alt={project.title}
               className="w-full h-48 object-contain rounded-t-lg"
             />
-            <div className="p-4 flex flex-col flex-1 space-y-2">
+            <div className="p-4 flex flex-col flex-1 space-y-2 cursor-grab">
               <h3 className="text-xl font-semibold">{project.title}</h3>
               <p className="text-pretty text-sm text-gray-500 dark:text-gray-400">
                 {project.subtitle}
@@ -128,10 +145,10 @@ const Projects = () => {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

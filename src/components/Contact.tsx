@@ -1,8 +1,16 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="p-8 max-w-2xl mx-auto">
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      id="contact"
+      className="p-8 max-w-2xl mx-auto"
+    >
       <h2 className="text-3xl font-bold mb-4">Contact</h2>
       <p className="mb-6 text-gray-600 dark:text-gray-300">
         I'd love to hear from you! Whether you have a question, project idea, or
@@ -57,7 +65,7 @@ const Contact = () => {
           Send
         </button>
       </form>
-    </section>
+    </motion.section>
   );
 };
 

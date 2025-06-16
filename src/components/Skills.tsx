@@ -22,6 +22,8 @@ import {
   SiVite,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Skills = () => {
   const skills = [
@@ -46,22 +48,41 @@ const Skills = () => {
     [<BsBraces />, "OOP"],
     [<SiPostman />, "Postman"],
   ];
+  const constraintsRef = useRef(null);
 
   return (
-    <section id="skills" className="p-8 max-w-5xl mx-auto">
+    <motion.section
+      ref={constraintsRef}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      id="skills"
+      className="p-8 max-w-5xl mx-auto"
+    >
       <h2 className="text-3xl font-bold mb-6">Skills</h2>
       <div className="flex flex-wrap gap-4">
         {skills.map(([icon, name], index) => (
-          <span
+          <motion.span
+            animate={{
+              scale: [1, 1.13, 1],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            drag
+            dragConstraints={constraintsRef}
             key={index}
-            className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-neutral-800 rounded-full text-sm transition-all duration-200 hover:scale-105 dark:hover:text-yellow-400 cursor-pointer"
+            className="cursor-grab flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-neutral-800 rounded-full text-sm transition-all duration-200 hover:scale-105 dark:hover:text-yellow-400"
           >
             {icon}
             {name}
-          </span>
+          </motion.span>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

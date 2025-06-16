@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Profile = () => {
   const socials = [
     {
@@ -107,24 +109,54 @@ const Profile = () => {
   return (
     <section className="max-w-4xl mx-auto">
       <div className="flex flex-row-reverse items-center">
-        <img
+        <motion.img
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
           src="/my-portfolio-challenge/profile.webp"
           alt="Kenny Viver"
           className="w-32 h-32 mx-auto rounded-full mb-4 hidden md:block"
         />
         <div>
-          <p className="text-pretty font-semibold text-gray-900 dark:text-gray-300">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-pretty font-semibold text-gray-900 dark:text-gray-300"
+          >
             Full Stack Developer based in Vancouver, BC
-          </p>
-          <p className="text-pretty text-gray-500 dark:text-gray-400 mt-2 mb-4">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-pretty text-gray-500 dark:text-gray-400 mt-2 mb-4"
+          >
             Passionate about responsive UI, accessibility, and modern JavaScript
             frameworks. Currently exploring full-stack with React & Node.js.
-          </p>
+          </motion.p>
         </div>
       </div>
-      <div className="flex gap-3 flex-wrap">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+        viewport={{ once: true }}
+        className="flex gap-3 flex-wrap"
+      >
         {socials.map((social, i) => (
-          <a
+          <motion.a
+            animate={{
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
             key={i}
             href={social.href}
             target="_blank"
@@ -133,9 +165,9 @@ const Profile = () => {
             aria-label={social.name}
           >
             {social.icon}
-          </a>
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
