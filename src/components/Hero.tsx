@@ -9,7 +9,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-4xl font-bold"
+        className="text-4xl font-bold font-chivo"
       >
         Hi, I'm Kenny Viver
       </motion.h1>

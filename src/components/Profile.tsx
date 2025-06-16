@@ -124,7 +124,7 @@ const Profile = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-pretty font-semibold text-gray-900 dark:text-gray-300"
+            className="text-pretty font-semibold text-gray-900 dark:text-gray-300 font-chivo"
           >
             Full Stack Developer based in Vancouver, BC
           </motion.p>

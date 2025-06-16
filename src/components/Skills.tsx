@@ -60,7 +60,7 @@ const Skills = () => {
       id="skills"
       className="p-8 max-w-5xl mx-auto"
     >
-      <h2 className="text-3xl font-bold mb-6">Skills</h2>
+      <h2 className="text-3xl font-bold mb-6 font-chivo">Skills</h2>
       <div className="flex flex-wrap gap-4">
         {skills.map(([icon, name], index) => (
           <motion.span

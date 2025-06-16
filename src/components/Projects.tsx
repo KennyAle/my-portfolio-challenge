@@ -90,7 +90,7 @@ const Projects = () => {
       id="projects"
       className="p-8 max-w-6xl mx-auto"
     >
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
+      <h2 className="text-3xl font-bold mb-6 font-chivo">Projects</h2>
       <div ref={constraintsRef} className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <motion.div
@@ -109,7 +109,7 @@ const Projects = () => {
               className="w-full h-48 object-contain rounded-t-lg"
             />
             <div className="p-4 flex flex-col flex-1 space-y-2 cursor-grab">
-              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <h3 className="text-xl font-semibold font-chivo">{project.title}</h3>
               <p className="text-pretty text-sm text-gray-500 dark:text-gray-400">
                 {project.subtitle}
               </p>

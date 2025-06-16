@@ -11,7 +11,7 @@ const Contact = () => {
       id="contact"
       className="p-8 max-w-4xl mx-auto"
     >
-      <h2 className="text-3xl font-bold mb-4">Contact</h2>
+      <h2 className="text-3xl font-bold mb-4 font-chivo">Contact</h2>
       <p className="mb-6 text-gray-600 dark:text-gray-300">
         I'd love to hear from you! Whether you have a question, project idea, or
         just want to say hello — feel free to reach out.

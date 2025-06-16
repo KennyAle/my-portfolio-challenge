@@ -38,7 +38,7 @@ const Timeline = () => {
       id="timeline"
       className="p-8 max-w-4xl mx-auto"
     >
-      <h2 className="text-3xl font-bold mb-6">Timeline</h2>
+      <h2 className="text-3xl font-bold mb-6 font-chivo">Timeline</h2>
       <ol className="border-l-4 border-blue-500">
         {events.map((e, i) => (
           <li
