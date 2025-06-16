@@ -9,7 +9,7 @@ const Navbar = () => {
       viewport={{ once: true }}
       className="fixed w-full top-0 z-50 bg-white dark:bg-black shadow flex justify-center md:justify-between items-center px-6 py-4"
     >
-      <h1 className="text-xl font-bold hidden md:block">
+      <h1 className="text-xl font-bold hidden md:block font-chivo">
         <a href="#">Kenny Viver</a>
       </h1>
       <div className="flex font-semibold items-center gap-5">
