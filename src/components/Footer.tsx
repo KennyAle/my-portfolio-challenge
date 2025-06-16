@@ -7,7 +7,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t text-gray-800 dark:text-gray-100 text-sm">
+    <footer className="border-t text-gray-800 dark:text-white text-sm">
       <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <div className="text-center md:text-left">
           <p>© {new Date().getFullYear()} Made with &lt;3 by Kenny Viver.</p>

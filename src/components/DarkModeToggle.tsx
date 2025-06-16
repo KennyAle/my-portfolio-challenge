@@ -7,6 +7,7 @@ const DarkModeToggle = ({ setDarkMode, darkMode }: Props) => {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
+      aria-label={darkMode ? "Activate light mode" : "Activate dark mode"}
       className="cursor-pointer fixed bottom-8 right-4 z-100 w-10 h-10 rounded-full bg-white dark:bg-black/50 flex items-center justify-center"
     >
       {darkMode ? (
