@@ -7,7 +7,7 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="fixed w-full top-0 z-50 bg-white dark:bg-black shadow flex justify-between items-center px-6 py-4"
+      className="fixed w-full top-0 z-50 bg-white dark:bg-black shadow flex justify-center md:justify-between items-center px-6 py-4"
     >
       <h1 className="text-xl font-bold hidden md:block">
         <a href="#">Kenny Viver</a>

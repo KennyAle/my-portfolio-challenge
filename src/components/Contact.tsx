@@ -9,7 +9,7 @@ const Contact = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
       id="contact"
-      className="py-8 max-w-2xl mx-auto"
+      className="p-8 max-w-4xl mx-auto"
     >
       <h2 className="text-3xl font-bold mb-4">Contact</h2>
       <p className="mb-6 text-gray-600 dark:text-gray-300">
