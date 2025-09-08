@@ -4,20 +4,23 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "Movie Web App",
-    subtitle: "Web 2 - Midterm Project",
+    title: "Loot - Pirate Card Game",
+    subtitle: "Multiplayer Online Game",
     description:
-      "Responsive movie site using TMDB API with dark/light mode, trending titles, and search functionality.",
+      "Online multiplayer pirate card game where players attack, defend, and capture merchant ships. Includes real-time chat, notifications, and leaderboard.",
     stack: [
       "React",
       "Tailwind CSS",
-      "TMDB API",
-      "Dark Mode",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "Framer Motion",
       "Responsive Design",
+      "Real-time Multiplayer",
     ],
-    img: "/my-portfolio-challenge/movie.png",
-    live: "https://kennyale.github.io/web-2-midterm-project-KennyAle/",
-    repo: "https://github.com/KennyAle/web-2-midterm-project-KennyAle",
+    img: "/my-portfolio-challenge/loot.png",
+    live: "https://loot-frontend.onrender.com/",
+    repo: "https://github.com/Cornerstone-CICCC/program-project-final-picnic",
   },
   {
     title: "Shopping Web App",
@@ -35,8 +38,24 @@ const projects = [
       "Admin Dashboard",
     ],
     img: "/my-portfolio-challenge/letspicnic.png",
-    live: "https://letspicnic.com",
+    live: "https://lets-go-picnic.onrender.com/",
     repo: "https://github.com/KennyAle/lets-picnicp",
+  },
+  {
+    title: "Movie Web App",
+    subtitle: "Web 2 - Midterm Project",
+    description:
+      "Responsive movie site using TMDB API with dark/light mode, trending titles, and search functionality.",
+    stack: [
+      "React",
+      "Tailwind CSS",
+      "TMDB API",
+      "Dark Mode",
+      "Responsive Design",
+    ],
+    img: "/my-portfolio-challenge/movie.png",
+    live: "https://kennyale.github.io/web-2-midterm-project-KennyAle/",
+    repo: "https://github.com/KennyAle/web-2-midterm-project-KennyAle",
   },
   {
     title: "EmpowerNow Website",
@@ -53,7 +72,7 @@ const projects = [
       "EmailJS",
     ],
     img: "/my-portfolio-challenge/empowernow.png",
-    live: "https://empowernowconsulting.com/",
+    live: "https://consulting.empowernowconsulting.com/",
     repo: "https://github.com/KennyAle/empowernow",
   },
   {
@@ -109,7 +128,9 @@ const Projects = () => {
               className="w-full h-48 object-contain rounded-t-lg"
             />
             <div className="p-4 flex flex-col flex-1 space-y-2 cursor-grab">
-              <h3 className="text-xl font-semibold font-chivo">{project.title}</h3>
+              <h3 className="text-xl font-semibold font-chivo">
+                {project.title}
+              </h3>
               <p className="text-pretty text-sm text-gray-500 dark:text-gray-400">
                 {project.subtitle}
               </p>
