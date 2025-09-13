@@ -24,7 +24,7 @@ const Profile = () => {
     },
     {
       name: "Phone",
-      href: "tel:+1234567890",
+      href: "tel:+17787511471",
       icon: (
         <svg
           aria-label="Phone"
