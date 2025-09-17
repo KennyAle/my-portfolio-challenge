@@ -34,7 +34,7 @@ const Contact = () => {
           <FaGithub />
         </a>
         <a
-          href="https://ca.linkedin.com/kenny.viver"
+          href="https://www.linkedin.com/in/kenny-ale-viver"
           target="_blank"
           className="hover:text-black dark:hover:text-white"
           aria-label="LinkedIn"

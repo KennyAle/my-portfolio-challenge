@@ -43,7 +43,7 @@ const Profile = () => {
     },
     {
       name: "LinkedIn",
-      href: "https://ca.linkedin.com/kenny.viver",
+      href: "https://www.linkedin.com/in/kenny-ale-viver",
       icon: (
         <svg
           aria-label="LinkedIn"
